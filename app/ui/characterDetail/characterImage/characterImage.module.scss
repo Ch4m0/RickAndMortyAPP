@@ -1,0 +1,18 @@
+.characterImage {
+    grid-gap: 4px;
+    display: grid;
+    justify-items: start;
+    order: 1;
+  
+    img {
+      aspect-ratio: 1 / 1; /* Proporción de aspecto cuadrado */
+      object-fit: cover;
+      border: 1px solid #ccc; /* Cambia el color del borde según sea necesario */
+      width: 100%;
+      height: auto;
+      border-radius: 0.375rem; /* Equivalente a rounded-lg */
+      overflow: hidden;
+      @apply dark:border-gray-800; /* Aplica el color de borde oscuro en modo oscuro */
+    }
+  }
+  

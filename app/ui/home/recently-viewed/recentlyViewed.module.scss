@@ -1,0 +1,12 @@
+.recentlyViewed__title {
+    margin-bottom: 1rem; 
+    font-size: 1rem;
+    line-height: 1.75rem; 
+    font-weight: 700; 
+
+    &__grid{
+        display: grid;
+        gap: 1rem; 
+    }
+
+}

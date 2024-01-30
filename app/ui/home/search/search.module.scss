@@ -1,0 +1,28 @@
+
+.searchBar {
+
+    margin-bottom: 1rem; 
+
+        &__label {
+            font-weight: 700;
+        }
+
+        &__input {
+            width: 100%; // Equivalente a w-full en TailwindCSS
+            border-radius: 0.375rem; // Equivalente a rounded-md en TailwindCSS
+            border: 1px solid #ccc; // Equivalente a border border-gray-200 en TailwindCSS
+            padding-top: 0.563rem; // Equivalente a py-[9px] en TailwindCSS
+            padding-bottom: 0.563rem; // Equivalente a py-[9px] en TailwindCSS
+            padding-left: 1rem; // Equivalente a pl-10 en TailwindCSS
+            font-size: 0.875rem; // Equivalente a text-sm en TailwindCSS
+            outline: 2px solid transparent; // Equivalente a outline-2 en TailwindCSS
+            box-sizing: border-box;
+
+            &::placeholder {
+                color: #ccc; // Equivalente a placeholder:text-gray-500 en TailwindCSS
+            }
+    }
+}
+
+
+

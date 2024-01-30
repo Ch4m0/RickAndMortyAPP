@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .card__image {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    border-radius: 50%; /* Para hacer que la imagen sea redonda */
+    margin-bottom: 16px;
+  }
+  
+  .card__name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  

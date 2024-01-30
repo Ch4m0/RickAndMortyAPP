@@ -1,0 +1,30 @@
+@import '../../../styles/mixins';
+
+.container {
+    display: flex;
+    gap: 16px; // Agregar gap para dispositivos de escritorio y tabletas
+
+    @include respond-to('phone') {
+        flex-direction: column; // Cambiar a columna en dispositivos móviles
+        gap: 0; // Eliminar el gap en dispositivos móviles
+    }
+
+    @include respond-to('desktop') {
+        justify-content: center; // Centrar elementos en dispositivos de escritorio
+        padding: 6rem;
+        min-height: 100vh;
+        max-width: 80%;
+    }
+
+    &__imageSection{
+        width: 100%;
+    }
+
+    &__detailsSection{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+} 

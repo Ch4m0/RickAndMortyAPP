@@ -1,0 +1,19 @@
+.characterItem{
+    display: flex; 
+    gap: 1rem; 
+    align-items: center; 
+    margin-bottom: 16px;
+
+
+    &__image{
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-weight: 600; 
+        font-size: 1rem;
+    }
+}
+
+
+

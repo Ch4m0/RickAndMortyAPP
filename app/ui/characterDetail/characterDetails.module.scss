@@ -1,0 +1,19 @@
+// CharacterCard.module.scss
+
+.cardContent {
+  display: grid;
+  gap: 1rem;
+
+  &__item {
+    display: grid;
+    gap: 0.25rem;
+
+    &_label {
+      font-weight: bold;
+    }
+
+    &_text {
+      font-size: 0.875rem; /* Equivalente a text-base */
+    }
+  }
+}
