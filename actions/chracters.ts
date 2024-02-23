@@ -20,7 +20,6 @@ export async function getOnlyCharacter(characterId: number) {
     const data = res.json();
     const characterDataTransform = getPersonalData(await data);
     return characterDataTransform;
-
   } catch (error) {
     return error;
   }

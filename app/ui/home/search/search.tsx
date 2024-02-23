@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useDebouncedCallback } from 'use-debounce';
-import styles from './search.module.scss'
-const WAIT_BETWEEN_SEARCHES = 300
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useDebouncedCallback } from "use-debounce";
+import styles from "./search.module.scss";
+const WAIT_BETWEEN_SEARCHES = 300;
 
 export default function Search({ placeholder }: { placeholder: string }) {
   const searchParams = useSearchParams();
@@ -11,28 +11,28 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const { replace } = useRouter();
 
   const handleSearch = useDebouncedCallback((term: string) => {
-
     const params = new URLSearchParams(searchParams);
     if (term) {
-      params.set('query', term);
+      params.set("query", term);
+      params.set("page", "1");
     } else {
-      params.delete('query');
+      params.delete("query");
+      params.delete("page", "1");
     }
 
     replace(`${pathName}?${params.toString()}`);
-
   }, WAIT_BETWEEN_SEARCHES);
 
   return (
     <div className={styles.searchBar}>
-      <label className={styles.searchBar__label}  htmlFor="search">
+      <label className={styles.searchBar__label} htmlFor="search">
         Search by name
       </label>
       <input
         className={styles.searchBar__input}
         placeholder={placeholder}
         onChange={(e) => handleSearch(e.target.value)}
-        defaultValue={searchParams.get('query')?.toString() || ''}
+        defaultValue={searchParams.get("query")?.toString() || ""}
       />
     </div>
   );
