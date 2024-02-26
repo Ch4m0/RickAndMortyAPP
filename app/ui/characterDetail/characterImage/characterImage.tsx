@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./CharacterImage.module.scss";
+import styles from "./characterImage.module.scss";
 import Image from "next/image";
 
-const CharacterImage = ({ photo, name }: {photo: string, name: string}) => {
+const CharacterImage = ({ photo, name }: { photo: string; name: string }) => {
   return (
     <div className={styles.characterImage}>
       <Image
