@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './Card.module.scss';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import styles from "./card.module.scss";
+import Image from "next/image";
+import Link from "next/link";
 
 interface CardProps {
   name: string;
@@ -12,12 +12,16 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ name, imageUrl, characterId }) => {
   return (
     <Link href={`/character/${characterId}`}>
-    <div className={styles.card}>
-      <Image className={styles.card__image} src={imageUrl} alt={name} 
-       width={100} height={100}
-      />
-      <p className={styles.card__name}>{name}</p>
-    </div>
+      <div className={styles.card}>
+        <Image
+          className={styles.card__image}
+          src={imageUrl}
+          alt={name}
+          width={100}
+          height={100}
+        />
+        <p className={styles.card__name}>{name}</p>
+      </div>
     </Link>
   );
 };
